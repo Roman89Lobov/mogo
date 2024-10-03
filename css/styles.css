@@ -597,19 +597,22 @@ main {
 .photography {
     border: solid 1px #e5e5e5;
     width: 600px;
-    height: 241px;
+    /*height: 241px;*/
 }
 .creativity,
 .web_design {
     border: solid 1px #e5e5e5;
     width: 600px;
-    height: 60px;
+    /*height: 60px;*/
     justify-content: center;
     margin-top: 10px;
 }
+
 .photography > div:first-child {
+    /*border-top: solid 1px #e5e5e5;*/
     border-bottom: solid 1px #e5e5e5;
     height: 60px;
+    /*overflow: hidden;*/
 }
 .photography > div:first-child,
 .creativity > div:first-child,
@@ -617,32 +620,27 @@ main {
     align-items: center;
     justify-content: space-between;
     /*border: thin solid;*/
+    /*border-top: solid 1px #e5e5e5;*/
+    border-bottom: solid 1px #e5e5e5;
+    height: 60px;
 }
-.photography p {
-    width: 550px;
-    height: 132px;
-    /*border: thin solid;*/
-    font-family: "Roboto LightItalic", sans-serif;
-    color: #999999;
-    font-size: 15px;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 24px;
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 21px;
-    overflow: auto;
-    padding-right: 25px;
-    /* display: none; */
-}
-.photography p::-webkit-scrollbar {
+
+.photography p::-webkit-scrollbar,
+.creativity p::-webkit-scrollbar,
+.web_design p::-webkit-scrollbar {
     width: 5px;
 }
-.photography p::-webkit-scrollbar-track {
+
+.photography p::-webkit-scrollbar-track,
+.creativity p::-webkit-scrollbar-track,
+.web_design p::-webkit-scrollbar-track {
     box-shadow: inset 0 0 60px #f5f5f5;
     border-radius: 10px;
 }
-.photography p::-webkit-scrollbar-thumb {
+
+.photography p::-webkit-scrollbar-thumb,
+.creativity p::-webkit-scrollbar-thumb,
+.web_design p::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 60px #95e1d3;
 }
@@ -665,6 +663,33 @@ main {
     width: 22px;
     height: 12px;
     margin-right: 20px;
+}
+
+.what_text_content {
+    display: none;
+    /*border-top: solid 1px #e5e5e5;*/
+    width: 550px;
+    height: 132px;
+    font-family: "Roboto LightItalic", sans-serif;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 21px;
+    overflow: auto;
+    padding-right: 25px;
+    transition: max-height 0.5s ease; /* Плавная анимация */
+    max-height: 0; /* Высота 0 при скрытии */
+    opacity: 0; /* Прозрачность 0 для скрытого состояния */
+}
+
+.what_text_content.show {
+    display: block; /* Показать блок */
+    max-height: 150px; /* Устанавливаем максимальную высоту блока */
+    opacity: 1; /* Плавно проявляем */
 }
 
 
