@@ -172,10 +172,11 @@ header {
       панель
            Header*/
 .nav_panel {
-    margin-left: 350px;
-    margin-right: 340px;
-    margin-top: 145px;
-    margin-bottom: 27px;
+    margin: 145px 340px 27px 350px;
+    /*margin-left: 350px;*/
+    /*margin-right: 340px;*/
+    /*margin-top: 145px;*/
+    /*margin-bottom: 27px;*/
     justify-content: space-between;
     /*border: thin solid;*/
 }
